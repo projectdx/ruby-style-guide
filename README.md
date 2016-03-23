@@ -289,6 +289,28 @@ If you must break any of these rules you have the burden of proof to prove to yo
   end
   ```
 
+* <a name="indent-rescue"></a>
+<sup>[[link](#indent-rescue)]</sup>
+
+  # bad/ok
+  ```Ruby
+  def method
+    begin
+      #do_stuff
+    rescue => e
+      # deal with error
+    end
+  end
+  ```
+  
+  # better
+  ```Ruby
+  def method
+    #do_stuff
+  rescue => e
+    # deal with error
+  end
+  ```
 * <a name="indent-conditional-assignment"></a>
   When assigning the result of a conditional expression to a variable,
   preserve the usual alignment of its branches.
