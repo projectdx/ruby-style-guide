@@ -3045,15 +3045,15 @@ resource cleanup when possible.
 <sup>[[link](#no-mutable-keys)]</sup>
 
 * <a name="hash-literals"></a>
-  Use the Ruby 1.9 hash literal syntax when your hash keys are symbols.
+  Use hash rockets syntax when your hash keys are symbols.
 <sup>[[link](#hash-literals)]</sup>
 
   ```Ruby
   # bad
-  hash = { :one => 1, :two => 2, :three => 3 }
+  hash = { one: 1, two: 2, three: 3 }
 
   # good
-  hash = { one: 1, two: 2, three: 3 }
+  hash = { :one => 1, :two => 2, :three => 3 }
   ```
 
 * <a name="no-mixed-hash-syntaces"></a>
@@ -3613,15 +3613,15 @@ Prefer double-quotes unless your string literal contains `"` or escape character
   When possible prefer non metaprogramming abstractions to DRY up code because it's more readable and searchable.
   ```ruby
   #bad
-  
+
   [:account_number, :current_balance, :high_credit, :past_due].each do |method|
     define_method(method) do
       credit_liability.fetch(method, nil)
     end
   end
-  
+
   #good
-  
+
   def account_number
     fetch(__method__, nil)
   end
