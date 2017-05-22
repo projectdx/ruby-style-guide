@@ -1,8 +1,8 @@
-#Definition:
+# Definition:
 
 * Code review is the process in which code written by one or more developers is inspected by another developer to look for defects and improvements.
 
-#Goals of Code Review:
+# Goals of Code Review:
 
 * Simplify Code
 * Make sure acceptance criteria are met
@@ -11,13 +11,13 @@
 * Keep good test coverage
 * Ensure code is documented (should be undestandable by a person new to the codebase)
 
-#Roles
+# Roles
 
-##Management:
+## Management:
 
 * Don't use code reviews as a means to produce developer performance metrics (ie Code Review grades).  They should only be viewed through the lens of work towards the best code possible being delivered.
 
-##Reviewers:
+## Reviewers:
 
 * Remain polite.
 * Prefer to comment as an observer, "I did not see what was going on here." vs "This doesn't make sense."
@@ -29,7 +29,7 @@
 * Avoid using "why" in questions, it can read as accusatory.
 * Don't think you need to follow a "script", reviews should be a conversation.
 
-##Developers:
+## Developers:
 
 * Remain polite.
 * Following our style guide will make it easier to review your code.
