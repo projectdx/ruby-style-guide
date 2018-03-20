@@ -1226,6 +1226,28 @@ condition](#safe-assignment-in-condition).
   Some will argue that multiline chaining would look OK with the use of {...},
   but they should ask themselves - is this code really readable and can the
   blocks' contents be extracted into nifty methods?
+  
+  * <a name="RSpec-let-blocks"></a>
+  Prefer `{...}` over `do...end` for single-line and multi-line *let blocks*.
+<sup>[[link](#RSpec-let-blocks)]</sup>
+
+```Ruby
+#bad
+let(:owners) do
+  [
+    double(:owner),
+    double(:owner),
+  ]
+end
+
+#good
+let(:owners) {
+  [
+    double(:owner),
+    double(:owner),
+  ]
+}
+```
 
 * <a name="block-argument"></a>
   Consider using explicit block argument to avoid writing block literal that
